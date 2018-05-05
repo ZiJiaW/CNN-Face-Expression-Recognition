@@ -1,9 +1,7 @@
 import cv2
 import sys
-import json
 import time
 import numpy as np
-from keras.models import model_from_json
 import CNN_MODEL as cnn    
 
 emotion_labels = ['angry', "disgust",'fear', 'happy', 'sad', 'surprise', 'neutral']
