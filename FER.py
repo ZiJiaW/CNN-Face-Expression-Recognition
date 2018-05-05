@@ -226,8 +226,7 @@ if __name__ == '__main__':
     
     (x_train, y_train, x_test, y_test) = GetInput()
     
-    
-    #print(x_train.shape)
+    print(x_train.shape)
     (x_train, y_train) = DataPreprocess(x_train, y_train)
     print(x_train.shape)
     print('Start!')
@@ -236,22 +235,8 @@ if __name__ == '__main__':
     (x_val, y_val) = DataPreprocess(x_val, y_val)
     train(x_train, y_train, x_val, y_val)
     
-    
-    #print(x_test.shape)
+    print(x_test.shape)
     test(x_test, y_test)
-    
-    #classify(['test1.JPG','test2.JPG','test3.JPG','test4.JPG','test5.JPG','test6.JPG','test7.JPG','test8.JPG','test9.JPG'])
-'''
-    pixel = np.zeros((48,48))
-    im = Image.open('test1.JPG').convert('L')
-    im = im.resize((IMAGE_SIZE,IMAGE_SIZE))
-    for i in range(IMAGE_SIZE):
-        for j in range(IMAGE_SIZE):
-            pixel[i,j]=im.getpixel((i,j))
-    sess = MODEL.Initialize()
-    print(MODEL.Predict(pixel, sess))
-    
-'''
     
     
     
